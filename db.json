@@ -1,0 +1,70 @@
+{
+  "Inventario": [
+    {
+      "precioProducto": "400",
+      "nombreProducto": "Cheesecake",
+      "categoria": "Postres",
+      "peso": 10,
+      "stock": 0,
+      "fechaCreacion":"17/04/2020",
+      "fechaUltimaVenta":"17/04/2020",
+      "id": 1
+    },
+    {
+      "precioProducto": "300",
+      "nombreProducto": "Rib eye 400g",
+      "categoria": "Cortes",
+      "peso": 10,
+      "stock": 0,
+      "fechaCreacion":"17/04/2020",
+      "fechaUltimaVenta":"17/04/2020",
+      "id": 2
+    },
+    {
+      "nombreProducto": "Coca cola",
+      "precioProducto": "100",
+      "categoria": "Bebida",
+      "peso": 10,
+      "stock": 0,
+      "fechaCreacion":"17/04/2020",
+      "fechaUltimaVenta":"17/04/2020",
+      "id": 3
+    },
+    {
+      "nombreProducto": "Pepsi",
+      "precioProducto": "20",
+      "categoria": "Bebida",
+      "id": 4
+    },
+    {
+      "nombreProducto": "Fanta",
+      "precioProducto": "30",
+      "categoria": "Bebida",
+      "peso": 10,
+      "stock": 0,
+      "fechaCreacion":"17/04/2020",
+      "fechaUltimaVenta":"17/04/2020",
+      "id": 5
+    },
+    {
+      "nombreProducto": "Squirt",
+      "precioProducto": "30",
+      "categoria": "Bebida",
+      "peso": 10,
+      "stock": 0,
+      "fechaCreacion":"17/04/2020",
+      "fechaUltimaVenta":"17/04/2020",
+      "id": 6
+    },
+    {
+      "nombreProducto": "Churrasco de Cuadril",
+      "precioProducto": "300",
+      "categoria": "Cortes",
+      "peso": 10,
+      "stock": 0,
+      "fechaCreacion":"17/04/2020",
+      "fechaUltimaVenta":"17/04/2020",
+      "id": 7
+    }
+  ]
+}
