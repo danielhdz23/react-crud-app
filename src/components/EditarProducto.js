@@ -21,9 +21,9 @@ function EditarProducto(props) {
         e.preventDefault();
         //Validacion
         const nuevoNombreProducto = nombreProductoRef.current.value,
-              nuevoPrecioProducto = precioProductoRef.current.value;
-              nuevoPesoProducto = pesoProductoRef.current.value;
-              nuevaReferenciaProducto = referenciaProductoRef.current.value;
+              nuevoPrecioProducto = precioProductoRef.current.value,
+              nuevoPesoProducto = pesoProductoRef.current.value,
+              nuevaReferenciaProducto = referenciaProductoRef.current.value,
               nuevoStockProducto = stockProductoRef.current.value;
 
         //Revisar si cambio la catgeoria de lo contrario asignar el mismo valor
@@ -91,14 +91,47 @@ function EditarProducto(props) {
                 </div>
 
                 <div className="form-group">
-                    <label>Precio Producto</label>
+                    <label>Referencia Producto</label>
+                    <input 
+                        type="text" 
+                        className="form-control" 
+                        name="referencia" 
+                        placeholder="Referencia Producto"
+                        ref={referenciaProductoRef}
+                        defaultValue={producto.referenciaProducto}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Precio Producto (COP)</label>
                     <input 
                         type="number" 
                         className="form-control" 
-                        name="precio"
-                        placeholder="Precio Producto"
+                        name="precio" 
                         ref={precioProductoRef}
                         defaultValue={producto.precioProducto}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Peso Producto (g)</label>
+                    <input 
+                        type="number" 
+                        className="form-control" 
+                        name="peso" 
+                        ref={pesoProductoRef}
+                        defaultValue={producto.pesoProducto}
+                    />
+                </div>
+
+                <div className="form-group">
+                    <label>Stock Producto</label>
+                    <input 
+                        type="number" 
+                        className="form-control" 
+                        name="stock" 
+                        ref={stockProductoRef}
+                        defaultValue={producto.stockProducto}
                     />
                 </div>
 
@@ -109,12 +142,12 @@ function EditarProducto(props) {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Postres"
+                        value="Enlatados"
                         onChange={leerValorRadio}
-                        defaultChecked={(producto.categoria === 'Postres')}
+                        defaultChecked={(producto.categoria === 'Enlatados')}
                     />
                     <label className="form-check-label">
-                        Postre
+                        Enlatado
                     </label>
                 </div>
                 <div className="form-check form-check-inline">
@@ -122,26 +155,12 @@ function EditarProducto(props) {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Bebida"
+                        value="Granos"
                         onChange={leerValorRadio}
-                        defaultChecked={(producto.categoria === 'Bebida')}
+                        defaultChecked={(producto.categoria === 'Granos')}
                     />
                     <label className="form-check-label">
-                        Bebida
-                    </label>
-                </div>
-
-                <div className="form-check form-check-inline">
-                    <input 
-                        className="form-check-input" 
-                        type="radio" 
-                        name="categoria"
-                        value="Cortes"
-                        onChange={leerValorRadio}
-                        defaultChecked={(producto.categoria === 'Cortes')}
-                    />
-                    <label className="form-check-label">
-                        Cortes
+                        Granos
                     </label>
                 </div>
 
@@ -150,12 +169,26 @@ function EditarProducto(props) {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Ensalada"
+                        value="Frutas"
                         onChange={leerValorRadio}
-                        defaultChecked={(producto.categoria === 'Ensalada')}
+                        defaultChecked={(producto.categoria === 'Frutas')}
                     />
                     <label className="form-check-label">
-                        Ensalada
+                        Frutas
+                    </label>
+                </div>
+
+                <div className="form-check form-check-inline">
+                    <input 
+                        className="form-check-input" 
+                        type="radio" 
+                        name="categoria"
+                        value="Verduras"
+                        onChange={leerValorRadio}
+                        defaultChecked={(producto.categoria === 'Verduras')}
+                    />
+                    <label className="form-check-label">
+                        Verduras
                     </label>
                 </div>
                 </div>

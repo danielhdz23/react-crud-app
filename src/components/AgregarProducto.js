@@ -9,6 +9,9 @@ function AgregarProducto({history, guardarRecargarProductos}) {
     //state
     const [nombreProducto, guardarNombre] = useState('');
     const [precioProducto, guardarPrecio] = useState('');
+    const [stockProducto, guardarStock] = useState('');
+    const [pesoProducto, guardarPeso] = useState('');
+    const [referenciaProducto, guardarReferencia] = useState('');
     const [categoria, guardarCategoria] = useState('');
     const [error, guardarError] = useState(false);
 
@@ -18,7 +21,7 @@ function AgregarProducto({history, guardarRecargarProductos}) {
 
     const agregarProducto = async e => {
         e.preventDefault();
-        if(nombreProducto === '' || precioProducto === '' || categoria === ''){
+        if(nombreProducto === '' || precioProducto === '' || categoria === ''|| pesoProducto === ''|| referenciaProducto === ''|| stockProducto === ''){
             guardarError(true);
             return;
         }
@@ -81,13 +84,12 @@ function AgregarProducto({history, guardarRecargarProductos}) {
                 </div>
 
                 <div className="form-group">
-                    <label>Precio Producto</label>
+                    <label>Precio Producto (COP)</label>
                     <input 
                         type="number" 
                         className="form-control" 
                         name="precio"
-                        minValue={0}
-                        placeholder="Precio Producto"
+                        min={0} defaultValue={0}
                         onInput={e => guardarPrecio(e.target.value)}
                     />
                 </div>
@@ -97,7 +99,7 @@ function AgregarProducto({history, guardarRecargarProductos}) {
                     <input 
                         type="number" 
                         className="form-control" 
-                        minValue={0}
+                        min={0} defaultValue={0}
                         name="peso" 
                         onInput={e => guardarPeso(e.target.value)}
                     />
@@ -108,7 +110,7 @@ function AgregarProducto({history, guardarRecargarProductos}) {
                     <input 
                         type="number" 
                         className="form-control" 
-                        minValue={0}
+                        min={0} defaultValue={0}
                         name="stock" 
                         onInput={e => guardarStock(e.target.value)}
                     />
@@ -121,11 +123,11 @@ function AgregarProducto({history, guardarRecargarProductos}) {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Postres"
+                        value="Enlatados"
                         onChange={leerValorRadio}
                     />
                     <label className="form-check-label">
-                        Postre
+                        Enlatado
                     </label>
                 </div>
                 <div className="form-check form-check-inline">
@@ -133,24 +135,11 @@ function AgregarProducto({history, guardarRecargarProductos}) {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Bebida"
+                        value="Granos"
                         onChange={leerValorRadio}
                     />
                     <label className="form-check-label">
-                        Bebida
-                    </label>
-                </div>
-
-                <div className="form-check form-check-inline">
-                    <input 
-                        className="form-check-input" 
-                        type="radio" 
-                        name="categoria"
-                        value="Cortes"
-                        onChange={leerValorRadio}
-                    />
-                    <label className="form-check-label">
-                        Cortes
+                        Granos
                     </label>
                 </div>
 
@@ -159,11 +148,24 @@ function AgregarProducto({history, guardarRecargarProductos}) {
                         className="form-check-input" 
                         type="radio" 
                         name="categoria"
-                        value="Ensalada"
+                        value="Frutas"
                         onChange={leerValorRadio}
                     />
                     <label className="form-check-label">
-                        Ensalada
+                        Frutas
+                    </label>
+                </div>
+
+                <div className="form-check form-check-inline">
+                    <input 
+                        className="form-check-input" 
+                        type="radio" 
+                        name="categoria"
+                        value="Verduras"
+                        onChange={leerValorRadio}
+                    />
+                    <label className="form-check-label">
+                        Verduras
                     </label>
                 </div>
                 </div>

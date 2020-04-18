@@ -18,7 +18,7 @@ function ProductoLista({producto, guardarRecargarProductos}) {
         }).then( async (result) => {
             if(result.value) {
                 try {
-                    const url = `http://localhost:4000/Inventario/${id}`;
+                    const url = `http://localhost:3004/Inventario/${id}`;
                     const resulltado = await axios.delete(url);
                     if(resulltado.status === 200) {
                         Swal.fire(
@@ -43,10 +43,17 @@ function ProductoLista({producto, guardarRecargarProductos}) {
     }
     return (
         <li data-categoria={producto.categoria} className="list-group-item d-flex justify-content-between align-weight-bold">
-            <p>
+            <h4>
                 {producto.nombreProducto} {'  '}
-                <span className="font-weight-bold">${producto.precioProducto}</span>
+            </h4>
+            <p>
+                <span className="font-weight-bold">{producto.stockProducto} unidades en stock</span>
             </p>
+            <p>
+            Precio de venta:
+            <span className="font-weight-bold"> ${producto.precioProducto}</span>
+            </p>
+
             <div>
                 <Link to={`/productos/editar/${producto.id}`} className="btn btn-success mr-2">
                     Editar
