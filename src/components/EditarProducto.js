@@ -13,9 +13,14 @@ function EditarProducto(props) {
     const referenciaProductoRef = useRef('');
     const stockProductoRef = useRef('');
     const pesoProductoRef = useRef('');
-
+    const fechaProductoRef = useRef('');
     const [error, guardarError] = useState(false);
     const [categoria, guardarCategoria] = useState('');
+
+    const curr = new Date();
+    curr.setDate(curr.getDate());
+    const date = curr.toISOString().substr(0,10);
+   
 
     const editarProducto = async e => {
         e.preventDefault();
@@ -24,7 +29,8 @@ function EditarProducto(props) {
               nuevoPrecioProducto = precioProductoRef.current.value,
               nuevoPesoProducto = pesoProductoRef.current.value,
               nuevaReferenciaProducto = referenciaProductoRef.current.value,
-              nuevoStockProducto = stockProductoRef.current.value;
+              nuevoStockProducto = stockProductoRef.current.value,
+              nuevaFechaProducto = fechaProductoRef.current.value;
 
         //Revisar si cambio la catgeoria de lo contrario asignar el mismo valor
         let categoriaProducto = (categoria === '') ? producto.categoria : categoria;
@@ -40,6 +46,7 @@ function EditarProducto(props) {
             pesoProducto : nuevoPesoProducto,
             referenciaProducto : nuevaReferenciaProducto,
             stockProducto : nuevoStockProducto,
+            fechaModificacion: nuevaFechaProducto, 
             categoria : categoriaProducto
         }
         //Enviar el Request
@@ -78,6 +85,17 @@ function EditarProducto(props) {
                 className="mt-5"
                 onSubmit={editarProducto}
             >
+        <div className = "form-group">
+          <label>Fecha de Modificacion</label>
+          <input
+            type="date"
+            className="form-control"
+            ref={fechaProductoRef}
+            defaultValue={date}
+            disabled={true}
+            required = {false}            
+          />
+        </div>
                 <div className="form-group">
                     <label>Nombre Producto</label>
                     <input 

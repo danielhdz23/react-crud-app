@@ -7,8 +7,8 @@
       "categoria": "Enlatados",
       "pesoProducto": 10,
       "stockProducto": 100,
-      "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaCreacion": "17-04-2020",
+      "fechaModificacion": "17-04-2020",
       "id": 1
     },
     {
@@ -19,7 +19,7 @@
       "pesoProducto": 10,
       "stockProducto": 100,
       "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaModificacion": "17-04-2020",
       "id": 2
     },
     {
@@ -29,8 +29,8 @@
       "categoria": "Granos",
       "pesoProducto": 10,
       "stockProducto": 100,
-      "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaCreacion": "17-04-2020",
+      "fechaModificacion": "17-04-2020",
       "id": 3
     },
     {
@@ -40,8 +40,8 @@
       "categoria": "Verduras",
       "pesoProducto": 10,
       "stockProducto": 100,
-      "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaCreacion": "17-04-2020",
+      "fechaModificacion": "17-04-2020",
       "id": 4
     },
     {
@@ -51,8 +51,8 @@
       "categoria": "Frutas",
       "pesoProducto": 10,
       "stockProducto": 100,
-      "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaCreacion": "17-04-2020",
+      "fechaModificacion": "17-04-2020",
       "id": 5
     },
     {
@@ -63,7 +63,7 @@
       "pesoProducto": 10,
       "stockProducto": 100,
       "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaModificacion": "17-04-2020",
       "id": 6
     },
     {
@@ -73,8 +73,8 @@
       "categoria": "Frutas",
       "pesoProducto": 10,
       "stockProducto": 100,
-      "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaCreacion": "17-04-2020",
+      "fechaModificacion": "17-04-2020",
       "id": 7
     },
     {
@@ -85,8 +85,30 @@
       "pesoProducto": 10,
       "stockProducto": 100,
       "fechaCreacion": "17/04/2020",
-      "fechaUltimaVenta": "17/04/2020",
+      "fechaModificacion": "17-04-2020",
       "id": 8
+    },
+    {
+      "nombreProducto": "Champiñon",
+      "precioProducto": "200",
+      "pesoProducto": "100",
+      "referenciaProducto": "Blanco",
+      "stockProducto": "25",
+      "fechaCreacion": "17-04-2020",
+      "fechaModificacion": "17-04-2020",
+      "categoria": "Verduras",
+      "id": 9
+    },
+    {
+      "nombreProducto": "Arroz",
+      "precioProducto": "100",
+      "pesoProducto": "250",
+      "referenciaProducto": "Cristal",
+      "stockProducto": "300",
+      "fechaCreacion": "2020-04-19",
+      "fechaModificacion": "2020-04-19",
+      "categoria": "Granos",
+      "id": 10
     }
   ]
 }
