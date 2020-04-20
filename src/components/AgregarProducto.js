@@ -5,12 +5,10 @@ import Error from "./Error";
 import { withRouter } from "react-router-dom";
 
 function AgregarProducto({ history, guardarRecargarProductos }) {
+  const curr = new Date();
+  curr.setDate(curr.getDate());
+  const date = curr.toISOString().substr(0, 10);
 
-    const curr = new Date();
-    curr.setDate(curr.getDate());
-    const date = curr.toISOString().substr(0,10);
-   
-    
   //state
   const [nombreProducto, guardarNombre] = useState("");
   const [precioProducto, guardarPrecio] = useState("");
@@ -21,8 +19,6 @@ function AgregarProducto({ history, guardarRecargarProductos }) {
   const [error, guardarError] = useState(false);
   const [fechaCreacion, guardarFecha] = useState(date);
   const [fechaModificacion, guardarFechaModificacion] = useState(date);
-
-
 
   const leerValorRadio = (e) => {
     guardarCategoria(e.target.value);
@@ -79,14 +75,14 @@ function AgregarProducto({ history, guardarRecargarProductos }) {
       <h1 className="text-center">Agregar Nuevo Producto</h1>
       {error ? <Error mensaje="Todos los campos son obligatorios" /> : null}
       <form className="mt-5" onSubmit={agregarProducto}>
-        <div className = "form-group">
+        <div className="form-group">
           <label>Fecha de Creación</label>
           <input
             type="date"
             className="form-control"
             defaultValue={date}
             disabled={true}
-            value = {date}
+            value={date}
             onLoad={(e) => guardarFecha(e.target.value)}
           />
         </div>

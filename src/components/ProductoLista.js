@@ -4,6 +4,52 @@ import axios from 'axios';
 import Swal from 'sweetalert2';
 
 function ProductoLista({producto, guardarRecargarProductos}) {
+
+    const venderProducto = id => {
+        //TODO: Vender producto
+        const editarStock = {
+            stockProducto : producto.stockProducto - 1,
+            precioProducto : producto.precioProducto,
+            nombreProducto : producto.nombreProducto,
+            pesoProducto : producto.pesoProducto,
+            referenciaProducto : producto.referenciaProducto,
+            fechaModificacion: producto.fechaModificacion, 
+            categoria : producto.categoria
+        }
+        Swal.fire({
+            title: '¿Estás seguro?',
+            text: "¡Es una accion irreversible!",
+            type: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            confirmButtonText: '¡Si!'
+        }).then( async (result) => {
+            if(result.value) {
+                try {
+                    const url = `http://localhost:4000/Inventario/${id}`;
+                    const resultado = await axios.put(url, editarStock);
+                    if(resultado.status === 200) {
+                        Swal.fire(
+                            '¡Vendido!',
+                            '¡El producto fue vendido correctamente!',
+                            'success'
+                        )
+                        //Consultar la API nuevamente
+                        guardarRecargarProductos(true);
+                    }
+                } catch (error) {
+                    console.log(error);
+                    Swal.fire({
+                        type: 'error',
+                        title: 'Error',
+                        text: 'Hubo un error, vuelva a intentarlo.'
+                    })
+                }
+            }
+        })
+    }
+
     const eliminarProducto = id => {
         console.log('Eliminando: ',id);
         //TODO: Eliminar los registros
@@ -18,7 +64,7 @@ function ProductoLista({producto, guardarRecargarProductos}) {
         }).then( async (result) => {
             if(result.value) {
                 try {
-                    const url = `http://localhost:3004/Inventario/${id}`;
+                    const url = `http://localhost:4000/Inventario/${id}`;
                     const resulltado = await axios.delete(url);
                     if(resulltado.status === 200) {
                         Swal.fire(
@@ -54,7 +100,12 @@ function ProductoLista({producto, guardarRecargarProductos}) {
             <span className="font-weight-bold"> ${producto.precioProducto}</span>
             </p>
 
+            <button type = "button" className = "btn btn-info"  onClick={() => venderProducto(producto.id)}>
+                    Vender    
+            </button>
+
             <div>
+                
                 <Link to={`/productos/editar/${producto.id}`} className="btn btn-success mr-2">
                     Editar
                 </Link>

@@ -1,19 +1,18 @@
 {
   "Inventario": [
     {
-      "precioProducto": "400",
-      "referenciaProducto": "Atún en agua",
-      "nombreProducto": "Atún",
-      "categoria": "Enlatados",
+      "stockProducto": 98,
+      "precioProducto": "300",
+      "nombreProducto": "Pera",
       "pesoProducto": 10,
-      "stockProducto": 100,
-      "fechaCreacion": "17-04-2020",
+      "referenciaProducto": "Verde",
       "fechaModificacion": "17-04-2020",
+      "categoria": "Frutas",
       "id": 1
     },
     {
       "precioProducto": "300",
-      "referenciaProducto": "",
+      "referenciaProducto": "Tangelo",
       "nombreProducto": "Naranja",
       "categoria": "Frutas",
       "pesoProducto": 10,
@@ -87,17 +86,6 @@
       "fechaCreacion": "17/04/2020",
       "fechaModificacion": "17-04-2020",
       "id": 8
-    },
-    {
-      "nombreProducto": "Champiñon",
-      "precioProducto": "200",
-      "pesoProducto": "100",
-      "referenciaProducto": "Blanco",
-      "stockProducto": "25",
-      "fechaCreacion": "17-04-2020",
-      "fechaModificacion": "17-04-2020",
-      "categoria": "Verduras",
-      "id": 9
     },
     {
       "nombreProducto": "Arroz",

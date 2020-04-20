@@ -47,7 +47,8 @@ function EditarProducto(props) {
             referenciaProducto : nuevaReferenciaProducto,
             stockProducto : nuevoStockProducto,
             fechaModificacion: nuevaFechaProducto, 
-            categoria : categoriaProducto
+            categoria : categoriaProducto,
+            fechaCreacion: producto.fechaCreacion 
         }
         //Enviar el Request
         const url = `http://localhost:4000/Inventario/${producto.id}`;
