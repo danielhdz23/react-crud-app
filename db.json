@@ -1,7 +1,7 @@
 {
   "Inventario": [
     {
-      "stockProducto": 98,
+      "stockProducto": 0,
       "precioProducto": "300",
       "nombreProducto": "Pera",
       "pesoProducto": 10,
