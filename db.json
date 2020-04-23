@@ -1,12 +1,13 @@
 {
   "Inventario": [
     {
-      "stockProducto": 0,
       "precioProducto": "300",
       "nombreProducto": "Pera",
-      "pesoProducto": 10,
+      "pesoProducto": "10",
       "referenciaProducto": "Verde",
-      "fechaModificacion": "17-04-2020",
+      "stockProducto": "1",
+      "fechaCreacion": "17/04/2020",
+      "fechaModificacion": "2020-04-20",
       "categoria": "Frutas",
       "id": 1
     },

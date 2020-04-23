@@ -82,7 +82,6 @@ function AgregarProducto({ history, guardarRecargarProductos }) {
             className="form-control"
             defaultValue={date}
             disabled={true}
-            value={date}
             onLoad={(e) => guardarFecha(e.target.value)}
           />
         </div>

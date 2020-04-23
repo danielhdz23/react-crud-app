@@ -5,7 +5,7 @@ import {withRouter} from 'react-router-dom';
 import Error from './Error';
 
 function EditarProducto(props) {
-    //Destructuring de props
+    //Destructurar las props
     const {history, producto, guardarRecargarProductos} = props;
     //Generar los refs
     const precioProductoRef = useRef('');
